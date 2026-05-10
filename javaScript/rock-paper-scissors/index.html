@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <span>🪨 📄 ✂️</span>
+    </header>
+    <div class="buttons-container">
+        <!-- Rock -->
+        <button class="rock" onclick="playGame('rock');">
+            <img src="images/rock-emoji.png" >
+        </button>
+        <!-- Paper -->
+        <button class="paper" onclick="playGame('paper');">
+            <img src="images/paper-emoji.png" >
+        </button>
+        <!-- Scissors -->
+        <button class="scissors" onclick="playGame('scissors');">
+            <img src="images/scissors-emoji.png" >
+        </button>
+    </div>
+    
+    <div class="stats-container">
+        <p class="picks">
+            <!-- innerHTML -->
+        </p>
+        <p class="result">
+            <!-- innerHTML -->
+        </p>
+        <p class="score">
+            <!-- innerHTML -->
+        </p>
+    </div>
+
+    <div class="reset-game-container">
+        <button 
+            class="reset-game-btn"
+            onclick="
+            score.wins = 0;
+            score.ties = 0;
+            score.losses = 0;
+            localStorage.removeItem('score');
+            updateScore();
+            location.reload();
+        ">Reset Game 🔄</button>
+        <button class="start-auto-btn" onclick="startAuto();">🤖 Start Auto Game 🤖</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
