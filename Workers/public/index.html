@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Workers management app</h1>
+            <p>View our dashboard from the db</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number" id="totalWorkers">0</div>
+                <div class="labal">Total Workers</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="number" id="average">-</div>
+                <div class="labal">Average Info</div>
+            </div>
+        </div>
+
+        <form id="addUserForm">
+            <input type="text" id="name" placeholder="Enter worker name" required>
+            <input type="email" id="email" placeholder="Enter worker email" required>
+            <input type="text" id="department" placeholder="Enter department" required>
+            <input type="text" id="role" placeholder="Enter role" required>
+            <input type="text" id="phone" placeholder="Enter phone number">
+            
+            <button type="submit">Add Worker</button>  
+        </form>
+
+        <div class="grid" id="workerGrid"></div>
+
+    </div>
+    <script src="api.js"></script>
+</body>
+
+</html>
