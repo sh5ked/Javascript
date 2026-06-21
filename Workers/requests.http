@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000    
+
+###
+
+GET {{baseUrl}}/
+
+###
+
+GET {{baseUrl}}/api/workers
+
+
+###
+  GET {{baseUrl}}/api/workers/6a2ee4e69a3fa9b5c92de96a
+
+###
+
+POST {{baseUrl}}/api/workers
+Content-Type: application/json
+
+   {
+            "name": "moshe Cohen",
+            "email": "moshe@company.com",
+            "phone": "050-1111124",
+            "department": "DevOps cod",
+            "role": "Mid-Level Engineer"
+        }
+
+###
+
+DELETE {{baseUrl}}/api/workers/6a33eb72626a1fb23b6e6913
